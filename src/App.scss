@@ -1,3 +1,6 @@
+body {
+  padding: 32px;
+}
 .App {
   text-align: center;
 }
@@ -46,4 +49,29 @@ h2 {
   background: #e3211d;
   margin: 0 auto;
   color: #fff;
+}
+.section {
+  color: #e3211d;
+  h1 {
+  }
+}
+
+.gjmaIcon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  color: blue
+}
+
+// IconList
+$IconList:
+  'Logo'
+;
+
+@each $Icon in $IconList {
+  .gjamIcon#{$Icon} {
+    background-image: url(./icon_#{$Icon}.svg)
+  }
 }
